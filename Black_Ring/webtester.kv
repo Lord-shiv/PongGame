@@ -1,0 +1,50 @@
+#:kivy 1.11.1
+<BaseWindow>:
+    url: target_url_text_field
+    response_body: response_body_text_field
+    GridLayout:
+        cols: 2
+        row: 3
+        width: root.width
+        height: root.height
+        Label:
+            text: "URL:"
+        TextInput:
+            id: target_url_text_field
+            size: 400, 30
+            text: "https://www.google.com"
+        Label:
+            text: "Method:"
+        GridLayout:
+            col: 3
+            rows: 3
+            Button:
+                text: "GET"
+                size_hint_y: None
+                height: 44
+                on_release: root.perform_http_request("GET")
+            Button:
+                text: "PUT"
+                size_hint_y: None
+                height: 44
+                on_release: root.perform_http_request("PUT")
+            Button:
+                text: "POST"
+                size_hint_y: None
+                height: 44
+                on_release: root.perform_http_request("POST")
+            Button:
+                text: "PATCH"
+                size_hint_y: None
+                height: 44
+                on_release: root.perform_http_request("PATCH")
+            Button:
+                text: "DELETE"
+                size_hint_y: None
+                height: 44
+                on_release: root.perform_http_request("DELETE")
+        Label:
+            text: "Response Body"
+
+        TextInput:
+            id: response_body_text_field
