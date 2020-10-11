@@ -1,2 +1,2 @@
-# PongGame
-python GUI (kivy framework for open source) 
+# PongGame Using Kivy
+Kivy (Open source framework for Python GUI) 
